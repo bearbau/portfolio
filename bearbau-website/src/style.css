@@ -7,17 +7,26 @@
 
 @font-face {
     font-family: 'Helvetica-custom';
-    src: url('assets/Helvetica.ttf') format('ttf'),
-         url('assets/Helvetica-Bold.ttf') format('ttf'),
-         url('assets/helvetica-light-587ebe5a59211.ttf');
+    src: url('assets/Helvetica.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-* {
+@font-face {
   font-family: 'Helvetica-custom';
+  src: url('assets/helvetica-light-587ebe5a59211.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+* {
   margin: 0px;
   padding: 0px;
+}
+
+body {
+  font-family: 'Helvetica-custom', sans-serif;
+  background-color: var(--light);
 }
 
 /* Header contents */
@@ -39,12 +48,10 @@ li {
 }
 
 /* Container contents */
-
 .container {
   display: flex;
   flex-direction: column;
-  background-color: var(--light);
-  padding: 40px;
+  padding: 5vh 15vh;
 }
 
 .carousel {
@@ -53,12 +60,19 @@ li {
   overflow: auto;
   padding: 16px 0px;
   gap: 20px;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* make responsive later https://www.w3schools.com/html/html_responsive.asp */
 .card {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  max-width: 300px;
   height: auto;
   padding: 16px;
   border-radius: 16px;
@@ -82,4 +96,15 @@ button {
   width: fit-content;
   padding: 5px 16px;
   border-radius: 16px;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 15vh;
+  background-color: var(--dark);
 }
