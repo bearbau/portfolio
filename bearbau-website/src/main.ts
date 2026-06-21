@@ -48,11 +48,15 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </ul>
   </div>
 
-  <div class="container">
-    <img src="${placeholder}" style="width: 200px;">
-    <h1>notebook: stats for nerds</h1>
-    <p>description blah blah</p>
-    <button>this is a button</button>
+  <div class="container-row">
+    <div class="col">
+      <img src=${placeholder} style="height: 200px;">
+    </div>
+    <div class="col">
+      <span class="title">notebook: stats for nerds</span>
+      <span class="subtitle">this is a description</span>
+      <button class="link">button</button>
+    </div>
   </div>
 
   <div class="container">   

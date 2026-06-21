@@ -54,6 +54,19 @@ li {
   padding: 5vh 15vh;
 }
 
+.container-row {
+  display: flex;
+  flex-direction: row;
+  padding: 5vh 15vh;
+}
+
+.col {
+  display: flex;
+  flex: 50%;
+  flex-direction: column;
+  padding: 16px;
+}
+
 .carousel {
   display: flex;
   flex-direction: row;
