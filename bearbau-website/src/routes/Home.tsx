@@ -69,6 +69,9 @@ const uiProjects = [
 export default function Home() {
   return (
     <>
+      <div className="container">
+        <img src={placeholder} style={{ height: "300px" }} />
+      </div>
       <div className="container-row">
         <div className="col">
           <img src={placeholder} style={{ height: "200px" }} />

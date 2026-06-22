@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router";
 import Home from "./routes/Home";
 import About from "./routes/About";
 import Projects from "./routes/Projects";
+import Blog from "./routes/Blog";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
         <Footer />
       </div>

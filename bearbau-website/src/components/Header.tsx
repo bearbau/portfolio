@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div className="header">
-      <h1>bearbau</h1>
+      <span style={{ color: "var(--light)", fontSize: "18px" }}>bearbau</span>
       <nav className="navbar">
         <Link to="/" className="link">
           home
@@ -13,6 +13,9 @@ export default function Header() {
         </Link>
         <Link to="/projects" className="link">
           projects
+        </Link>
+        <Link to="/blog" className="link">
+          blog
         </Link>
       </nav>
     </div>

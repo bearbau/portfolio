@@ -1,8 +1,9 @@
 :root {
-  --primary: #2970ab;
+  --primary: #8FB6D8;
   --secondary: #62cbe0;
-  --light: #faf8f3;
-  --dark: #323034;
+  --light: #fff9f0;
+  --light-hover: #dfd7cb;
+  --dark: #243A5E;
 }
 
 @font-face {
@@ -27,6 +28,7 @@
 body {
   font-family: 'Helvetica-custom', sans-serif;
   background-color: var(--light);
+  margin: 20px;
 }
 
 .app {
@@ -40,8 +42,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--primary);
-  padding: 16px;
+  background-color: var(--dark);
+  padding: 3vh 15vh;
+  border-radius: 30px;
 }
 
 .navbar {
@@ -101,7 +104,7 @@ body {
 }
 
 .card:hover {
-  background-color: var(--secondary);
+  background-color: var(--light-hover);
 }
 
 .title {
