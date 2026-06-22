@@ -29,6 +29,12 @@ body {
   background-color: var(--light);
 }
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Header contents */
 .header {
   display: flex;
@@ -38,13 +44,14 @@ body {
   padding: 16px;
 }
 
-ul {
+.navbar {
   display: flex;
-  list-style-type: none;
+  gap: 15px;
 }
 
-li {
-  padding: 0px 10px;
+.link {
+  color: var(--dark);
+  text-decoration: none;
 }
 
 /* Container contents */
@@ -116,6 +123,7 @@ button:hover {
 }
 
 .footer {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   padding: 5vh 15vh;
