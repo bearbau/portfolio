@@ -1,5 +1,6 @@
 import placeholder from "../assets/placeholder.jpg";
 import Carousel from "../components/Carousel";
+import notebook from "../assets/notebook.mp4";
 
 const certifications = [
   {
@@ -69,17 +70,51 @@ const uiProjects = [
 export default function Home() {
   return (
     <>
-      <div className="container">
-        <img src={placeholder} style={{ height: "300px" }} />
-      </div>
-      <div className="container-row">
-        <div className="col">
-          <img src={placeholder} style={{ height: "200px" }} />
+      {/* hero page */}
+      <div className="hero">
+        <div className="hero-1"></div>
+        <div className="hero-2">
+          <span className="hero-title">
+            <b>hi there.</b>&nbsp;<i className="fa-solid fa-fish-fins"></i>
+          </span>
+          <p>
+            front-end designer & aspiring pentester. visual creative who is
+            willing to learn new stuff. loves color blue. (maybe a bit too
+            much.)
+          </p>
+          <button className="link">
+            <i className="fa-regular fa-file">&nbsp;</i>resume
+          </button>
         </div>
-        <div className="col">
+      </div>
+
+      {/* start of page */}
+      <div className="container-row">
+        <div
+          className="col"
+          style={{ flex: "75%", padding: "0vh 15vh 0vh 15vh" }}
+        >
           <span className="title">notebook: stats for nerds</span>
-          <span className="subtitle">this is a description</span>
-          <button className="link">button</button>
+          <span className="subtitle">
+            a blog for CTF solutions, bash scripting, automation, cybersec
+            resources, etc.
+          </span>
+          <div>
+            <button className="link">blog</button> &nbsp;
+            <button className="link">
+              <i className="fa-brands fa-telegram"></i>&nbsp;telegram channel
+            </button>
+          </div>
+        </div>
+        <div className="col" style={{ flex: "25%", padding: "0px" }}>
+          <video
+            src={notebook}
+            style={{ height: "50vh", borderRadius: "20px" }}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
         </div>
       </div>
 

@@ -1,34 +1,46 @@
 :root {
   --primary: #8FB6D8;
   --secondary: #62cbe0;
-  --light: #fff9f0;
+  --light: #f7f4ef;
   --light-hover: #dfd7cb;
   --dark: #243A5E;
+  --text: #353535;
 }
 
+/* font CDNs */
 @font-face {
-    font-family: 'Helvetica-custom';
-    src: url('assets/Helvetica.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica-custom';
-  src: url('assets/helvetica-light-587ebe5a59211.ttf') format('truetype');
-  font-weight: 300;
+  font-family: 'Inter Variable';
   font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: 'DM Serif Text';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/dm-serif-text@latest/latin-400-normal.woff2) format('woff2'),
+       url(https://cdn.jsdelivr.net/fontsource/fonts/dm-serif-text@latest/latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
 * {
   margin: 0px;
   padding: 0px;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 body {
-  font-family: 'Helvetica-custom', sans-serif;
+  font-family: 'Inter Variable', sans-serif;
   background-color: var(--light);
-  margin: 20px;
+  padding: 0vh 10vh;
 }
 
 .app {
@@ -37,14 +49,42 @@ body {
   flex-direction: column;
 }
 
-/* Header contents */
+/* general text stuff */
+p {
+  font-family: 'Inter Variable', sans-serif;
+  color: var(--text);
+}
+
+h1 {
+  font-family: 'Inter Variable', sans-serif;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+video {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* header contents */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--dark);
-  padding: 3vh 15vh;
-  border-radius: 30px;
+  padding: 15px 20px;
+  margin: 6vh 0px 15px;
+  width: 40vh;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .navbar {
@@ -53,30 +93,68 @@ body {
 }
 
 .link {
-  color: var(--dark);
+  color: var(--light);
   text-decoration: none;
 }
 
-/* Container contents */
+.link:hover {
+  text-decoration: underline;
+}
+
+/* hero page */
+.hero {
+  background: linear-gradient(rgba(251, 251, 251, 0.392), rgba(255, 255, 255, 0.5)), 
+              url('assets/hero-wallpaper.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  padding: 30px 50px 30px 40px;
+  height: 40vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: center;
+}
+
+.hero-title {
+  font-family: 'DM Serif Text', serif;
+  font-size: clamp(1.8rem, 5vw, 4rem);
+  color: #49648e;
+  text-shadow: rgba(61, 87, 152, 0.24) 0px 3px 8px;
+}
+
+.hero-1 {
+  flex: 60%;
+}
+
+.hero-2 {
+  flex:40%;
+}
+
+/* container contents */
 .container {
   display: flex;
   flex-direction: column;
-  padding: 5vh 15vh;
 }
 
 .container-row {
   display: flex;
   flex-direction: row;
-  padding: 5vh 15vh;
+  padding: 2rem 0rem;
 }
 
 .col {
   display: flex;
-  flex: 50%;
-  flex-direction: column;
-  padding: 16px;
+  flex-direction: column;  /* customize flex percentage to liking */
+  padding: 1rem;
+  justify-content: center;
+  align-items: flex-start; 
 }
 
+
+/* carousel */
 .carousel {
   display: flex;
   flex-direction: row;
@@ -108,23 +186,37 @@ body {
 }
 
 .title {
-  font-size: 24px;
+  font-family: 'DM Serif Text', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark);
 }
 
 .subtitle {
-  font-size: 12px;
+  font-family: 'Inter Variable', sans-serif;
+  font-size: 1rem;
+  color: var(--text);
 }
 
 button {
+  background-color: var(--primary);
   width: fit-content;
   padding: 5px 16px;
-  border-radius: 16px;
+  margin: 16px 0px;
+  border: 0px;
+  border-radius: 20px;
+  font-size: 20px;
+  height: 40px;
+  box-shadow: rgba(61, 87, 152, 0.24) 0px 3px 8px;
+  transition-duration: 0.3s;
 }
 
 button:hover {
   background-color: var(--secondary);
+  box-shadow: rgba(41, 56, 94, 0.604) 0px 3px 8px;;
 }
 
+/* footer */
 .footer {
   margin-top: auto;
   display: flex;
