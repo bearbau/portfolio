@@ -1,6 +1,7 @@
 import placeholder from "../assets/placeholder.jpg";
 import Carousel from "../components/Carousel";
 import notebook from "../assets/notebook.mp4";
+import background from "../assets/hero-wallpaper.jpg";
 
 const certifications = [
   {
@@ -85,6 +86,34 @@ export default function Home() {
           <button className="link">
             <i className="fa-regular fa-file">&nbsp;</i>resume
           </button>
+        </div>
+      </div>
+
+      {/* navigator page */}
+      <div className="nav-container">
+        <div
+          className="nav-col"
+          style={{
+            backgroundImage: `url(${background})`,
+          }}
+        >
+          Certifications
+        </div>
+        <div
+          className="nav-col"
+          style={{
+            backgroundImage: `url(${background})`,
+          }}
+        >
+          UI Projects
+        </div>
+        <div
+          className="nav-col"
+          style={{
+            backgroundImage: `url(${background})`,
+          }}
+        >
+          Blog
         </div>
       </div>
 
