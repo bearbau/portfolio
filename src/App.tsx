@@ -1,7 +1,6 @@
 import "./style.css";
 import { Routes, Route } from "react-router";
 import Home from "./routes/Home";
-import About from "./routes/About";
 import Projects from "./routes/Projects";
 import Blog from "./routes/Blog";
 import Header from "./components/Header";
@@ -14,7 +13,6 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>

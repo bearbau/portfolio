@@ -4,29 +4,26 @@ export default function Header() {
   return (
     <>
       <div className="header-container">
-        <div className="col" style={{ padding: "28px 10px", flex: "50%" }}>
-          <h1>
+        {/* logo */}
+        <div className="header-col">
+          <span className="title-logo">
             <a href="/" style={{ color: "var(--dark)" }}>
               <i className="fa-solid fa-code"></i>&nbsp;bearbau
             </a>
-          </h1>
+          </span>
         </div>
-        <div className="header">
+        {/* navbar */}
+        <div className="header-col">
           <nav className="navbar">
-            <Link to="/" className="link">
-              home
-            </Link>
-            <Link to="/about" className="link">
-              about
-            </Link>
-            <Link to="/projects" className="link">
-              projects
-            </Link>
-            <Link to="/blog" className="link">
-              blog
-            </Link>
+            <Link to="/">home</Link>
+            <Link to="/projects">projects</Link>
+            <Link to="/blog">blog</Link>
           </nav>
         </div>
+        {/* contact button */}
+        <button className="contact-btn">
+          contact&nbsp;<i className="fa-solid fa-arrow-right"></i>
+        </button>
       </div>
     </>
   );
