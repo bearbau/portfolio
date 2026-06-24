@@ -15,7 +15,7 @@ export default function Card({
     <div className="card">
       <img src={image} />
       <span className="title">{title}</span>
-      <span className="subtitle">{subtitle}</span>
+      <p className="subtitle">{subtitle}</p>
       <button className="link">{buttonText}</button>
     </div>
   );
