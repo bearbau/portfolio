@@ -4,7 +4,6 @@ interface CardData {
   image: string;
   title: string;
   subtitle: string;
-  buttonText: string;
 }
 
 interface CarouselProps {
@@ -15,7 +14,7 @@ interface CarouselProps {
 export default function Carousel({ title, cards }: CarouselProps) {
   return (
     <div className="container">
-      <h1>{title}</h1>
+      <h1 style={{ textAlign: "center" }}>{title}</h1>
       <div className="carousel">
         {cards.map((card, index) => (
           <Card key={index} {...card} />

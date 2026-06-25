@@ -217,26 +217,26 @@ video {
 
 .hero-title {
   font-family: 'DM Serif Text', serif;
-  font-size: clamp(1.8rem, 5vw, 4rem);
+  font-size: clamp(1.5rem, 4.5vw, 3.5rem);
   color: #49648e;
   text-shadow: rgba(61, 87, 152, 0.24) 0px 3px 8px;
-  line-height: 3rem;
+  line-height: 2.5rem;
 }
 
 /* section 2 (skillset) */
 .hero-bottom {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   margin: 0rem 0rem 3rem 0rem;
   border-radius: 0px 0px 20px 20px;
   align-items: stretch;
   background-color: var(--light);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
-  margin: 0px 0px 5vh 0px;
+  margin: 0px 0px 3vh 0px;
   scroll-snap-align: start;
-  scroll-margin-top: 2rem;
+  scroll-margin-top: 1rem;
 }
 
 .nav-container {
@@ -319,37 +319,50 @@ button.stack:hover {
   box-shadow: rgba(61, 87, 152, 0.24) 0px 3px 8px;
 }
 
-/* carousels ------------------------------------------------------------------------ */
-
-
-
-
-/* skills navigation */
-
-/* container contents */
-.container {
+/* projects ------------------------------------------------------------------------ */
+.proj-container {
   scroll-snap-align: start;
- scroll-margin-top: 2rem;
+  scroll-margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  border-radius: 20px;
+  padding: 2rem 1.5rem 1rem 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  gap: 1rem;
 }
 
-.container-row {
+.proj-row {
   display: flex;
   flex-direction: row;
-  padding: 2rem 0rem;
+  align-items: space-between;
 }
 
-.col {
+.proj-preview {
   display: flex;
-  flex-direction: column;  /* customize flex percentage to liking */
-  padding: 1rem;
+  flex: 50%;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start; 
 }
 
+.proj-content {
+  display: flex;
+  flex: 50%;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+}
 
-/* carousel */
+/* carousel for certification ------------------------------------------------------------------------ */
+.container {
+  scroll-snap-align: start;
+  scroll-margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 2rem 1.5rem 1rem 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .carousel {
   display: flex;
   flex-direction: row;
@@ -364,32 +377,57 @@ button.stack:hover {
   display: none;
 }
 
-/* make responsive later https://www.w3schools.com/html/html_responsive.asp */
+/* card contents */
+
 .card {
   display: flex;
   flex-direction: column;
   max-width: 300px;
   height: auto;
   padding: 16px;
+  gap: 0.5rem;
   border-radius: 16px;
   background-color: var(--light);
   transition: background-color 0.3s ease;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  flex-shrink: 0;
 }
 
 .card:hover {
   background-color: var(--light-hover);
 }
 
+/* container contents */
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0rem;
+}
+
+
+.col {
+  display: flex;
+  flex-direction: column;  /* customize flex percentage to liking */
+  padding: 1rem;
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+
+/* carousel */
+
+
+/* make responsive later https://www.w3schools.com/html/html_responsive.asp */
+
+
 .title {
-  font-family: 'DM Serif Text', serif;
-  font-size: 2rem;
   font-weight: bold;
+  font-size: 1rem;
   color: var(--dark);
 }
 
 .subtitle {
-  font-family: 'Inter Variable', sans-serif;
   font-size: 0.8rem;
   line-height: 1.3rem;
 }

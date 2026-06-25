@@ -7,12 +7,13 @@ export default function Hero() {
         <div className="hero-spacer"></div>
         <div className="hero-content">
           <span className="hero-title">
-            hi there.&nbsp;<i className="fa-solid fa-fish-fins"></i>
+            I'm Beatriz Bautista.&nbsp;
+            <i className="fa-solid fa-fish-fins"></i>
           </span>
 
           <p>
-            front-end dev & visual creative who enjoys creating new stuff. loves
-            the color blue. (maybe a bit too much.)
+            front-end dev & UI/UX designer. loves the color blue.{" "}
+            <span style={{ fontSize: "0.7rem" }}>(maybe a bit too much.)</span>
           </p>
           <div className="btn-row">
             <button className="link">
