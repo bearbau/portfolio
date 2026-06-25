@@ -7,8 +7,9 @@ export default function Hero() {
         <div className="hero-spacer"></div>
         <div className="hero-content">
           <span className="hero-title">
-            <b>hi there.</b>&nbsp;<i className="fa-solid fa-fish-fins"></i>
+            hi there.&nbsp;<i className="fa-solid fa-fish-fins"></i>
           </span>
+
           <p>
             front-end dev & visual creative who enjoys creating new stuff. loves
             the color blue. (maybe a bit too much.)

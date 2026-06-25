@@ -8,12 +8,13 @@
 /* general: page ------------------------------------------------------------------------ */
 :root {
   --primary: #8FB6D8;
+  --primary-darker: #6c8ec4;
+  --primary-muted: #8aa3c0;
   --secondary: #62cbe0;
   --light: #fffdf9;
   --light-hover: #dfd7cb;
   --dark: #243A5E;
   --text: #353535;
-  --primary-darker: #6c8ec4;
 }
 
 * {
@@ -38,6 +39,10 @@ body {
   flex-direction: column;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 /* text formatting (no class) ------------------------------------------------------------------------ */
 @font-face {
   font-family: 'Inter Variable';
@@ -58,11 +63,17 @@ body {
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
+span {
+  margin: 0px;
+  line-height: 1rem;
+}
+
 h1 {
   font-family: 'Inter Variable', sans-serif;
   font-size: 1.5rem;
   color: var(--dark);
   margin: 0;
+  font-weight: 0px;
 }
 
 p {
@@ -138,6 +149,7 @@ video {
   align-items: center;
   justify-content: space-between;
   padding: 5vh 0px 2vh 0px;
+  scroll-snap-align: start;
 }
 
 .title-logo {
@@ -208,6 +220,7 @@ video {
   font-size: clamp(1.8rem, 5vw, 4rem);
   color: #49648e;
   text-shadow: rgba(61, 87, 152, 0.24) 0px 3px 8px;
+  line-height: 3rem;
 }
 
 /* section 2 (skillset) */
@@ -221,6 +234,9 @@ video {
   background-color: var(--light);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
+  margin: 0px 0px 5vh 0px;
+  scroll-snap-align: start;
+  scroll-margin-top: 2rem;
 }
 
 .nav-container {
@@ -243,6 +259,16 @@ video {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.nav-col:nth-child(1) { background-color: var(--primary); }
+.nav-col:nth-child(2) { background-color: var(--primary-darker); }
+.nav-col:nth-child(3) { background-color: var(--primary-muted); }
+
+.nav-col--active,
+.nav-col--active:hover {
+  filter: brightness(0.75);
+  box-shadow: inset rgba(36, 58, 94, 0.2) 0px 3px 8px;
+}
+
 .hero-info {
   display: flex;
   flex-direction: column; 
@@ -260,10 +286,11 @@ video {
   border-radius: 50%;
   color: var(--primary);
   position: absolute;
-  top: -2rem;
+  top: 16rem;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 10px;
+  bottom: -1.25rem;
 }
 
 @keyframes fadeIn {
@@ -274,12 +301,16 @@ video {
 .stack-row {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .stack {
-  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
   color: var(--light);
   margin: 0px;
+  padding: 1rem 0.9rem;
   cursor: default;
 }
 
@@ -295,13 +326,10 @@ button.stack:hover {
 
 /* skills navigation */
 
-
-.nav-col:hover {
-  filter: brightness(60%); 
-}
-
 /* container contents */
 .container {
+  scroll-snap-align: start;
+ scroll-margin-top: 2rem;
   display: flex;
   flex-direction: column;
 }

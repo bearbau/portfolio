@@ -8,29 +8,20 @@ function Skillset() {
       <div className="hero-bottom">
         <div className="nav-container">
           <div
-            className="nav-col"
+            className={`nav-col ${activeView === "front-end-hero" ? "nav-col--active" : ""}`}
             onClick={() => setActiveView("front-end-hero")}
-            style={{
-              backgroundColor: "var(--primary)",
-            }}
           >
             <i className="fa-solid fa-caret-down"></i>&nbsp;Front-end
           </div>
           <div
-            className="nav-col"
+            className={`nav-col ${activeView === "pl-hero" ? "nav-col--active" : ""}`}
             onClick={() => setActiveView("pl-hero")}
-            style={{
-              backgroundColor: "#6c8ec4",
-            }}
           >
             <i className="fa-solid fa-caret-down"></i>&nbsp;Back-end
           </div>
           <div
-            className="nav-col"
+            className={`nav-col ${activeView === "bash-hero" ? "nav-col--active" : ""}`}
             onClick={() => setActiveView("bash-hero")}
-            style={{
-              backgroundColor: "#8aa3c0",
-            }}
           >
             <i className="fa-solid fa-caret-down"></i>&nbsp;Shell Scripting
           </div>
@@ -45,49 +36,80 @@ function Skillset() {
         )}
 
         {activeView === "about-hero" && (
-          <div className="hero-info">
+          <div className="hero-info" style={{ padding: "2rem 2rem 0rem 2rem" }}>
             <h1 style={{ fontSize: "2rem" }}>What I do</h1>
             <p>
-              I am a <u>front-end web developer</u> currently pursuing a degree
-              in Computer Science. In my spare time, I study cybersecurity,
-              solve CTF challenges, and develop scripts using Bash.
+              I am a <u>front-end web developer and UI/UX designer</u> currently
+              studying Computer Science. <br />
+              On the side, I study cybersec, solve CTFs, and write Bash scripts.
             </p>
+
             <br />
             <div className="stack-row">
               <button className="stack">
-                <i className="fa-brands fa-html5"></i>html
+                <i className="fa-brands fa-html5"></i>&nbsp;html
               </button>
               <button className="stack">
-                <i className="fa-brands fa-css"></i>css
+                <i className="fa-brands fa-css"></i>&nbsp;css
               </button>
               <button className="stack">
-                <i className="fa-brands fa-bootstrap"></i>bootstrap
+                <i className="fa-brands fa-bootstrap"></i>&nbsp;bootstrap
               </button>
               <button className="stack">
-                <i className="fa-brands fa-react"></i>react
+                <i className="fa-brands fa-react"></i>&nbsp;react
               </button>
               <button className="stack">
-                <i className="fa-brands fa-typescript"></i>typescript
+                <i className="fa-brands fa-js"></i>&nbsp;javascript
               </button>
               <button className="stack">
-                <i className="fa-brands fa-figma"></i>figma
+                <i className="fa-brands fa-typescript"></i>&nbsp;typescript
               </button>
               <button className="stack">
+                <i className="fa-solid fa-bolt-lightning"></i>&nbsp;vite
+              </button>
+              <button className="stack">
+                <i className="fa-brands fa-figma"></i>&nbsp;figma
+              </button>
+              <button
+                className="stack"
+                style={{ backgroundColor: "var(--primary-darker)" }}
+              >
                 <i className="fa-brands fa-java"></i>&nbsp;java
               </button>
-              <button className="stack">
+              <button
+                className="stack"
+                style={{ backgroundColor: "var(--primary-darker)" }}
+              >
                 <i className="fa-brands fa-python"></i>&nbsp;python
               </button>
-              <button className="stack">
+              <button
+                className="stack"
+                style={{ backgroundColor: "var(--primary-darker)" }}
+              >
                 <i className="fa-solid fa-database"></i>&nbsp;SQL
               </button>
-              <button className="stack">
+              <button
+                className="stack"
+                style={{
+                  backgroundColor: "var(--primary-muted)",
+                }}
+              >
                 <i className="fa-brands fa-linux"></i>&nbsp;linux
               </button>
-              <button className="stack">
+              <button
+                className="stack"
+                style={{
+                  backgroundColor: "var(--primary-muted)",
+                }}
+              >
                 <i className="fa-solid fa-terminal"></i>&nbsp;bash
               </button>
-              <button className="stack">
+              <button
+                className="stack"
+                style={{
+                  backgroundColor: "var(--primary-muted)",
+                }}
+              >
                 <i className="fa-brands fa-docker"></i>&nbsp;docker
               </button>
             </div>
@@ -101,56 +123,34 @@ function Skillset() {
             <h1 style={{ fontSize: "2rem" }}>Front-end</h1>
             <p>
               I discovered my passion in front-end back in 2020 when I was
-              tinkering bootstrap elements on a website. Nowadays, I use React
-              and TypeScript. &nbsp;
+              tinkering with Bootstrap on a website. Nowadays, I use React and
+              TypeScript. &nbsp;
             </p>
             <br />
             <div className="stack-row">
               <button className="stack">
-                <i className="fa-brands fa-html5"></i>html
+                <i className="fa-brands fa-html5"></i>&nbsp;html
               </button>
               <button className="stack">
-                <i className="fa-brands fa-css"></i>css
+                <i className="fa-brands fa-css"></i>&nbsp;css
               </button>
               <button className="stack">
-                <i className="fa-brands fa-bootstrap"></i>bootstrap
+                <i className="fa-brands fa-bootstrap"></i>&nbsp;bootstrap
               </button>
               <button className="stack">
-                <i className="fa-brands fa-react"></i>react
+                <i className="fa-brands fa-react"></i>&nbsp;react
               </button>
               <button className="stack">
-                <i className="fa-brands fa-typescript"></i>typescript
+                <i className="fa-brands fa-js"></i>&nbsp;javascript
               </button>
               <button className="stack">
-                <i className="fa-brands fa-figma"></i>figma
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* bash scripting */}
-        {activeView === "bash-hero" && (
-          <div className="hero-info">
-            <h1 style={{ fontSize: "2rem" }}>Shell Scripting</h1>
-            <p>
-              On my free time, I solve CTFs and study Bash scripting. but I
-              mostly study it for the love of the game. I dump my bash scripts
-              on
-              <a href="https://github.com/bearbau/bearbash">
-                &nbsp;<u>bearbash</u>
-              </a>
-              .
-            </p>
-            <br />
-            <div className="stack-row">
-              <button className="stack">
-                <i className="fa-brands fa-linux"></i>&nbsp;linux
+                <i className="fa-brands fa-typescript"></i>&nbsp;typescript
               </button>
               <button className="stack">
-                <i className="fa-solid fa-terminal"></i>&nbsp;bash
+                <i className="fa-solid fa-bolt-lightning"></i>&nbsp;vite
               </button>
               <button className="stack">
-                <i className="fa-brands fa-docker"></i>&nbsp;docker
+                <i className="fa-brands fa-figma"></i>&nbsp;figma
               </button>
             </div>
           </div>
@@ -161,25 +161,75 @@ function Skillset() {
           <div className="hero-info">
             <h1 style={{ fontSize: "2rem" }}>Back-end</h1>
             <p>
-              I study Computer Science and these are some of the languages that
-              I had to study during my degree.
+              These are the languages I picked up through my Computer Science
+              degree (especially with Java).
             </p>
             <br />
             <div className="stack-row">
-              <button className="stack">
+              <button
+                className="stack"
+                style={{ backgroundColor: "var(--primary-darker)" }}
+              >
                 <i className="fa-brands fa-java"></i>&nbsp;java
               </button>
-              <button className="stack">
+              <button
+                className="stack"
+                style={{ backgroundColor: "var(--primary-darker)" }}
+              >
                 <i className="fa-brands fa-python"></i>&nbsp;python
               </button>
-              <button className="stack">
+              <button
+                className="stack"
+                style={{ backgroundColor: "var(--primary-darker)" }}
+              >
                 <i className="fa-solid fa-database"></i>&nbsp;SQL
               </button>
             </div>
           </div>
         )}
 
-        {/* button on clicks -------------------------------------------- */}
+        {/* bash scripting */}
+        {activeView === "bash-hero" && (
+          <div className="hero-info">
+            <h1 style={{ fontSize: "2rem" }}>Shell Scripting</h1>
+            <p>
+              In my free time, I solve CTFs and study Bash scripting, but I
+              mostly study it for the love of the game. I dump my Bash scripts
+              on
+              <a href="https://github.com/bearbau/bearbash">
+                &nbsp;<u>bearbash</u>
+              </a>
+              .
+            </p>
+            <br />
+            <div className="stack-row">
+              <button
+                className="stack"
+                style={{
+                  backgroundColor: "var(--primary-muted)",
+                }}
+              >
+                <i className="fa-brands fa-linux"></i>&nbsp;linux
+              </button>
+              <button
+                className="stack"
+                style={{
+                  backgroundColor: "var(--primary-muted)",
+                }}
+              >
+                <i className="fa-solid fa-terminal"></i>&nbsp;bash
+              </button>
+              <button
+                className="stack"
+                style={{
+                  backgroundColor: "var(--primary-muted)",
+                }}
+              >
+                <i className="fa-brands fa-docker"></i>&nbsp;docker
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
