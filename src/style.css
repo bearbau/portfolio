@@ -11,8 +11,9 @@
   --primary-darker: #6c8ec4;
   --primary-muted: #8aa3c0;
   --secondary: #62cbe0;
+  --tag: #b7ccdf;
   --light: #fffdf9;
-  --light-hover: #dfd7cb;
+  --light-hover: #d3e0ec5b;
   --dark: #243A5E;
   --text: #353535;
 }
@@ -38,10 +39,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-html {
+/*html {
   scroll-snap-type: y mandatory;
-}
+} enable when needed*/
+
 
 /* text formatting (no class) ------------------------------------------------------------------------ */
 @font-face {
@@ -88,16 +89,20 @@ a {
   color: var(--primary);
 }
 
+hr {
+  margin: 1rem 0rem;
+}
+
 /* button formatting  ------------------------------------------------------------------------ */
 
 button { /* default button */
   background-color: var(--primary);
   width: fit-content;
-  padding: 5px 16px;
+  padding: 5px 1rem;
   margin: 1rem 0px;
   border: 0px;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 1rem;
   height: 40px;
   box-shadow: rgba(61, 87, 152, 0.24) 0px 3px 8px;
   transition-duration: 0.3s;
@@ -136,6 +141,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 20px;
 }
 
 video {
@@ -235,7 +241,7 @@ video {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
   margin: 0px 0px 3vh 0px;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   scroll-margin-top: 1rem;
 }
 
@@ -326,36 +332,64 @@ button.stack:hover {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  padding: 2rem 1.5rem 1rem 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  gap: 1rem;
+  padding: 0rem 2rem;
+  margin: 2rem;
 }
 
 .proj-row {
   display: flex;
   flex-direction: row;
   align-items: space-between;
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  gap: 1rem;
+  transition-duration: 0.7s;
+  border-radius: 36px 20px 20px 36px;
+}
+
+.proj-row:hover {
+  background-color: var(--light-hover);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
 }
 
 .proj-preview {
   display: flex;
-  flex: 50%;
+  flex: 60%;
   flex-direction: column;
   justify-content: center;
 }
 
 .proj-content {
   display: flex;
-  flex: 50%;
-  padding: 1rem;
+  flex: 40%;
+  padding: 2rem;
   flex-direction: column;
   justify-content: center;
 }
 
+.tag {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  background-color: var(--tag);
+  color: var(--light);
+  margin: 0.5rem 0rem;
+  padding: 0rem 1rem;
+  cursor: default;
+  box-shadow: none;
+  border-radius: 10px;
+  height: 2rem;
+}
+
+.tag:hover {
+  background-color: var(--tag);
+  box-shadow: none;
+}
+
+
 /* carousel for certification ------------------------------------------------------------------------ */
 .container {
-  scroll-snap-align: start;
-  scroll-margin-top: 2rem;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -421,11 +455,7 @@ button.stack:hover {
 /* make responsive later https://www.w3schools.com/html/html_responsive.asp */
 
 
-.title {
-  font-weight: bold;
-  font-size: 1rem;
-  color: var(--dark);
-}
+
 
 .subtitle {
   font-size: 0.8rem;

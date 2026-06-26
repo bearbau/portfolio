@@ -11,10 +11,7 @@ export default function Hero() {
             <i className="fa-solid fa-fish-fins"></i>
           </span>
 
-          <p>
-            front-end dev & UI/UX designer. loves the color blue.{" "}
-            <span style={{ fontSize: "0.7rem" }}>(maybe a bit too much.)</span>
-          </p>
+          <p>front-end dev & UI/UX designer.</p>
           <div className="btn-row">
             <button className="link">
               <i className="fa-regular fa-file">&nbsp;</i>resume
