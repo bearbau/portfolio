@@ -394,7 +394,6 @@ button.stack:hover {
   flex-direction: column;
   border-radius: 20px;
   padding: 2rem 1.5rem 1rem 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .carousel {
@@ -469,5 +468,4 @@ button.stack:hover {
   display: flex;
   flex-direction: column;
   padding: 5vh 15vh;
-  background-color: var(--dark);
 }

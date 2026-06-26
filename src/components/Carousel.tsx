@@ -7,14 +7,15 @@ interface CardData {
 }
 
 interface CarouselProps {
-  title: string;
   cards: CardData[];
 }
 
-export default function Carousel({ title, cards }: CarouselProps) {
+export default function Carousel({ cards }: CarouselProps) {
   return (
-    <div className="container">
-      <h1 style={{ textAlign: "center" }}>{title}</h1>
+    <div className="proj-container">
+      <h1>Certifications</h1>
+      <p>my valid certifications</p>
+      <hr />
       <div className="carousel">
         {cards.map((card, index) => (
           <Card key={index} {...card} />

@@ -64,9 +64,8 @@ export default function Home() {
             </div>
             <h1>Breadcrumber</h1>
             <p>
-              Turning overwhelming passion projects into manageable "crumbs"
-              using AI-generated workflows and Pomodoro focused timers. A 5-day
-              hackathon project with my friends.
+              Turn overwhelming projects into "crumbs" with AI workflows and
+              Pomodoro timers. A 5-day hackathon project with my friends.
             </p>
             <button className="link">See more</button>
           </div>
@@ -126,7 +125,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Carousel title="Certifications" cards={certifications} />
+      <Carousel cards={certifications} />
     </>
   );
 }
