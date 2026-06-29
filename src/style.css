@@ -31,7 +31,6 @@
 body {
   font-family: 'Inter Variable', sans-serif;
   background-color: var(--light);
-  padding: 0vh 10vh;
 }
 
 .app {
@@ -154,67 +153,84 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5vh 0px 2vh 0px;
   scroll-snap-align: start;
+  padding: 0vh 5vh 0vh 5vh;
 }
 
 .title-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--dark);
+  font-size: 1.2rem;
+  color: var(--light);
 }
 
 .navbar {
   display: flex;
-  gap: 15px;
-  color: var(--dark);
+  gap: 1rem;
+  color: var(--light);
 }
 
 .navbar a {
   text-decoration: none;
-  color: var(--dark);
+  color: var(--light);
+}
+
+.navbar a:hover {
+  text-decoration: underline;
 }
 
 .contact-btn {
-  background-color: var(--dark);
+  background-color: transparent;
+  border: 2px solid var(--light);
   padding: 5px 15px;
   margin: 0;
   border-radius: 80px;
   font-size: 1rem;
   color: var(--light);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.contact-btn:hover {
+  background-color: color-mix(in srgb, var(--light), transparent 70%);
 }
 
 /* hero page ------------------------------------------------------------------------ */
 
 /* section 1 (hero) */
-.hero-top {
-  background: linear-gradient(rgba(251, 251, 251, 0.392), rgba(255, 255, 255, 0.5)), 
-              url('assets/hero-wallpaper.jpg') center/cover no-repeat;
+
+.hero {
+  background: url('assets/hero-wallpaper.jpg') center/cover no-repeat;
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  display: flex;
-  flex-direction: row;
-  padding: 30px 50px 30px 40px;
-  border-radius: 20px 20px 0px 0px;
-  height: 75vh;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 5vh 10vh;
 }
 
-.hero-spacer { 
-  flex: 55%;
+.hero-top {
+  display: flex;
+  flex-direction: column;
+  padding: 0vh 5vh 5vh 5vh;
+  height: 70vh;
+  align-items: left;
+  justify-content: center;
 }
 
 .hero-content {
-  flex:45%;
+  justify-content: center;
 }
 
-.link-circle {
+.hero-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+  border: 2px solid var(--light);
+  color: var(--light);
+}
+
+.hero-btn-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid var(--light);
   color: var(--light);
   height: 2.5rem;
   width: 2.5rem;
@@ -222,11 +238,16 @@ video {
 }
 
 .hero-title {
-  font-family: 'DM Serif Text', serif;
-  font-size: clamp(1.5rem, 4.5vw, 3.5rem);
-  color: #49648e;
+  font-family: 'Inter Variable', sans-serif;
+  font-size: clamp(1.3rem, 4.2vw, 3.3rem);
+  color: var(--light);
   text-shadow: rgba(61, 87, 152, 0.24) 0px 3px 8px;
   line-height: 2.5rem;
+  font-weight: bold;
+}
+
+.hero p {
+  color: var(--light)
 }
 
 /* section 2 (skillset) */
