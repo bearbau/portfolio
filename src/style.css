@@ -70,7 +70,7 @@ span {
 
 h1 {
   font-family: 'Inter Variable', sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--dark);
   margin: 0;
   font-weight: 0px;
@@ -201,13 +201,14 @@ video {
   background-position: bottom;
   background-attachment: fixed;
   padding: 5vh 10vh;
+  border-radius: 0px 0px 5rem 5rem;
 }
 
 .hero-top {
   display: flex;
   flex-direction: column;
   padding: 0vh 5vh 5vh 5vh;
-  height: 70vh;
+  height: 75vh;
   align-items: left;
   justify-content: center;
 }
@@ -239,7 +240,7 @@ video {
 
 .hero-title {
   font-family: 'Inter Variable', sans-serif;
-  font-size: clamp(1.3rem, 4.2vw, 3.3rem);
+  font-size: clamp(1rem, 4vw, 3rem);
   color: var(--light);
   text-shadow: rgba(61, 87, 152, 0.24) 0px 3px 8px;
   line-height: 2.5rem;
@@ -249,6 +250,54 @@ video {
 .hero p {
   color: var(--light)
 }
+
+/* what I do ------------------------------------------------------------------------ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.cntr-row {
+  display: flex;
+  flex-direction: row;
+  padding: 8rem 10rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;  /* customize flex percentage to liking */
+  padding: 1rem;
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+.oval {
+  background: url('assets/hero-wallpaper.jpg') center/cover no-repeat;
+  display: flex;
+  width: 20vh;
+  height: 50vh;
+  margin: 0.5rem;
+  border-radius: 3rem;
+  align-items: last baseline;
+  justify-content: flex-end;
+  transition-duration: 0.7s;
+}
+
+.oval p {
+  writing-mode: vertical-rl;
+  color: var(--light);
+  white-space: nowrap;      
+  margin: 3.5rem 1.5rem; 
+}
+
+.oval:nth-child(2) {  margin-top: 3rem; }
+
+.oval:nth-child(1):hover { margin-top: 2rem; opacity: 0.5; }
+.oval:nth-child(2):hover { margin-top: 5rem; opacity: 0.5; }
+.oval:nth-child(3):hover { margin-top: 2rem; opacity: 0.5; }
 
 /* section 2 (skillset) */
 .hero-bottom {
@@ -334,16 +383,17 @@ video {
 .stack {
   display: flex;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--light);
   margin: 0px;
   padding: 1rem 0.9rem;
   cursor: default;
+  box-shadow: none;
 }
 
 button.stack:hover {
   background-color: var(--primary);
-  box-shadow: rgba(61, 87, 152, 0.24) 0px 3px 8px;
+  box-shadow: none;
 }
 
 /* projects ------------------------------------------------------------------------ */
@@ -410,12 +460,6 @@ button.stack:hover {
 
 
 /* carousel for certification ------------------------------------------------------------------------ */
-.container {
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  padding: 2rem 1.5rem 1rem 1.5rem;
-}
 
 .carousel {
   display: flex;
@@ -453,20 +497,7 @@ button.stack:hover {
 
 /* container contents */
 
-.container-row {
-  display: flex;
-  flex-direction: row;
-  padding: 2rem 0rem;
-}
 
-
-.col {
-  display: flex;
-  flex-direction: column;  /* customize flex percentage to liking */
-  padding: 1rem;
-  justify-content: center;
-  align-items: flex-start; 
-}
 
 
 /* carousel */

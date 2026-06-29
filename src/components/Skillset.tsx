@@ -1,11 +1,88 @@
 import { useState } from "react";
+import placeholder from "../assets/hero-wallpaper.jpg";
 
 function Skillset() {
   const [activeView, setActiveView] = useState("about-hero");
 
   return (
     <>
-      <div className="hero-bottom">
+      <div className="cntr-row">
+        <div
+          className="col"
+          style={{ flex: "50%", height: "50vh", paddingRight: "1rem" }}
+        >
+          <h1>What I do</h1>
+          <p>
+            I am a front-end web developer and UI/UX designer who has been
+            developing and conceptualizing web designs since 2020. <br />
+            <br />
+            Currently pursuing a degree in Computer Science, I also spend my
+            free time studying cybersecurity, solving CTF challenges, and
+            writing Bash scripts.
+          </p>
+          <br />
+          <div className="stack-row">
+            <button className="stack">
+              <i className="fa-brands fa-html5"></i>&nbsp;html
+            </button>
+            <button className="stack">
+              <i className="fa-brands fa-css"></i>&nbsp;css
+            </button>
+            <button className="stack">
+              <i className="fa-brands fa-bootstrap"></i>&nbsp;bootstrap
+            </button>
+            <button className="stack">
+              <i className="fa-brands fa-react"></i>&nbsp;react
+            </button>{" "}
+            <button className="stack">
+              <i className="fa-brands fa-js"></i>&nbsp;javascript
+            </button>
+            <button className="stack">
+              <i className="fa-brands fa-typescript"></i>&nbsp;typescript
+            </button>
+            <button className="stack">
+              <i className="fa-solid fa-bolt-lightning"></i>&nbsp;vite
+            </button>
+            <button className="stack">
+              <i className="fa-brands fa-figma"></i>&nbsp;figma
+            </button>
+            <button className="stack">
+              <i className="fa-brands fa-java"></i>&nbsp;java
+            </button>
+            <button className="stack">
+              <i className="fa-brands fa-python"></i>&nbsp;python
+            </button>
+            <button className="stack">
+              <i className="fa-solid fa-database"></i>&nbsp;SQL
+            </button>
+            <button className="stack">
+              <i className="fa-brands fa-linux"></i>&nbsp;linux
+            </button>
+            <button className="stack">
+              <i className="fa-solid fa-terminal"></i>&nbsp;bash
+            </button>
+            <button className="stack">
+              <i className="fa-brands fa-docker"></i>&nbsp;docker
+            </button>
+          </div>
+        </div>
+        <div
+          className="col"
+          style={{ flex: "50%", flexDirection: "row", padding: "0px" }}
+        >
+          <div className="oval">
+            <p>front-end</p>
+          </div>
+          <div className="oval">
+            <p>back-end</p>
+          </div>
+          <div className="oval">
+            <p>shell-scripting</p>
+          </div>
+        </div>
+      </div>
+
+      {/*<div className="hero-bottom">
         <div className="nav-container">
           <div
             className={`nav-col ${activeView === "front-end-hero" ? "nav-col--active" : ""}`}
@@ -40,7 +117,7 @@ function Skillset() {
             <h1 style={{ fontSize: "2rem" }}>What I do</h1>
             <p>
               I am a <u>front-end web developer and UI/UX designer</u> currently
-              studying Computer Science. <br />
+              studying Computer Science.
               On the side, I study cybersec, solve CTFs, and write Bash scripts.
             </p>
 
@@ -117,7 +194,6 @@ function Skillset() {
           </div>
         )}
 
-        {/* front end dev */}
         {activeView === "front-end-hero" && (
           <div className="hero-info">
             <h1 style={{ fontSize: "2rem" }}>Front-end</h1>
@@ -155,8 +231,6 @@ function Skillset() {
             </div>
           </div>
         )}
-
-        {/* programming languages */}
         {activeView === "pl-hero" && (
           <div className="hero-info">
             <h1 style={{ fontSize: "2rem" }}>Back-end</h1>
@@ -187,8 +261,6 @@ function Skillset() {
             </div>
           </div>
         )}
-
-        {/* bash scripting */}
         {activeView === "bash-hero" && (
           <div className="hero-info">
             <h1 style={{ fontSize: "2rem" }}>Shell Scripting</h1>
@@ -230,7 +302,7 @@ function Skillset() {
             </div>
           </div>
         )}
-      </div>
+      </div> */}
     </>
   );
 }
