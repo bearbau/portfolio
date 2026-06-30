@@ -272,6 +272,7 @@ video {
   padding: 1rem;
   justify-content: center;
   align-items: flex-start; 
+  position: relative;
 }
 
 .oval {
@@ -309,7 +310,6 @@ video {
   align-items: stretch;
   background-color: var(--light);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  position: relative;
   margin: 0px 0px 3vh 0px;
   scroll-snap-align: center;
   scroll-margin-top: 1rem;
@@ -352,7 +352,7 @@ video {
   animation: fadeIn 0.7s ease;
 }
 
-.hero-bottom .link-circle {
+.link-circle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -364,9 +364,7 @@ video {
   position: absolute;
   top: 16rem;
   left: 50%;
-  transform: translateX(-50%);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 10px;
-  bottom: -1.25rem;
 }
 
 @keyframes fadeIn {
