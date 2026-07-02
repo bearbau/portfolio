@@ -38,6 +38,54 @@ export default function Hero() {
       </div>
 
       <Skillset />
+
+      <div
+        className="container"
+        style={{
+          padding: "2rem",
+          borderRadius: "0",
+        }}
+      >
+        <h1 style={{ textAlign: "center" }}>What I do</h1>
+        <div className="cntr-row" style={{ padding: "0rem 5rem" }}>
+          <div
+            style={{
+              border: "2px solid var(--dark)",
+              borderRadius: "20px",
+              margin: "3rem",
+              padding: "5rem",
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+            dictum justo, vel lobortis sem. Mauris sagittis commodo auctor.
+            Curabitur a lectus massa.
+          </div>
+          <div
+            style={{
+              border: "2px solid var(--dark)",
+              borderRadius: "20px",
+              margin: "3rem",
+              padding: "5rem",
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+            dictum justo, vel lobortis sem. Mauris sagittis commodo auctor.
+            Curabitur a lectus massa.
+          </div>
+          <div
+            style={{
+              border: "2px solid var(--dark)",
+              borderRadius: "20px",
+              margin: "3rem",
+              padding: "5rem",
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+            dictum justo, vel lobortis sem. Mauris sagittis commodo auctor.
+            Curabitur a lectus massa.
+          </div>
+        </div>
+      </div>
     </>
   );
 }

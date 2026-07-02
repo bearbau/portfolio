@@ -16,7 +16,7 @@ function Skillset() {
               animation: "fadeIn 0.7s ease",
             }}
           >
-            <h1>What I do</h1>
+            <h1>About me</h1>
             <p>
               I am a front-end web developer and UI/UX designer who has been
               developing and conceptualizing web designs since 2020. <br />
@@ -174,8 +174,7 @@ function Skillset() {
             <h1>Shell scripting</h1>
             <p>
               In my free time, I solve CTFs and study Bash scripting, but I
-              mostly study it for the love of the game. I dump my Bash scripts
-              on
+              mostly study it for fun. I dump my Bash scripts on
               <a href="https://github.com/bearbau/bearbash">
                 &nbsp;<u>bearbash</u>
               </a>
