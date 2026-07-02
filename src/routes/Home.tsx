@@ -131,155 +131,61 @@ export default function Home() {
       </div>
 
       <div className="proj-container">
-        <div className="test">
-          <h1>Projects</h1>
-          <p>compilation of websites and code snippets</p>
-          <hr />
-          <div className="test-row">
+        <h1>Projects</h1>
+        <p>compilation of websites and code snippets</p>
+        <hr />
+        <div className="proj-row">
+          <div className="proj-card">
             <div
-              className="test1"
-              style={{ backgroundImage: `url(${yardee})` }}
-            >
-              <div
-                style={{
-                  flex: "40% ",
-                  alignItems: "end",
-                  justifyContent: "flex-end",
-                  position: "relative",
-                }}
-              >
-                <h1
-                  className="test1_text"
-                  style={{
-                    fontSize: "5rem",
-                    position: "absolute",
-                    bottom: "0",
-                    right: "0",
-                  }}
-                >
-                  01
-                </h1>
-              </div>
-              <div style={{ flex: "60% " }}>
-                <p
-                  className="test1_text"
-                  style={{ position: "absolute", bottom: "0", padding: "1rem" }}
-                >
-                  <b style={{ fontSize: "1.5rem" }}>Yardee</b>
-                  <br /> Final project for my 11th grade Computer Programming
-                  subject.
-                </p>
-              </div>
-            </div>
-            <div
-              className="test1"
-              style={{ backgroundImage: `url(${neuchina})` }}
-            >
-              <div
-                style={{
-                  flex: "40% ",
-                  alignItems: "end",
-                  justifyContent: "flex-end",
-                  position: "relative",
-                }}
-              >
-                <h1
-                  className="test1_text"
-                  style={{
-                    fontSize: "5rem",
-                    position: "absolute",
-                    bottom: "0",
-                    right: "0",
-                  }}
-                >
-                  02
-                </h1>
-              </div>
-              <div style={{ flex: "60% " }}>
-                <p
-                  className="test1_text"
-                  style={{ position: "absolute", bottom: "0", padding: "1rem" }}
-                >
-                  <b style={{ fontSize: "1.5rem" }}>NEU China Studies Center</b>
-                  <br /> Designed to feature news from New Era University's
-                  China Studies Center.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="test-row">
-            <div
-              className="test1"
+              className="proj-prev"
               style={{ backgroundImage: `url(${breadcrumber})` }}
-            >
-              <div
-                style={{
-                  flex: "40% ",
-                  alignItems: "end",
-                  justifyContent: "flex-end",
-                  position: "relative",
-                }}
-              >
-                <h1
-                  className="test1_text"
-                  style={{
-                    fontSize: "5rem",
-                    position: "absolute",
-                    bottom: "0",
-                    right: "0",
-                  }}
-                >
-                  03
-                </h1>
-              </div>
-              <div style={{ flex: "60% " }}>
-                <p
-                  className="test1_text"
-                  style={{ position: "absolute", bottom: "0", padding: "1rem" }}
-                >
-                  <b style={{ fontSize: "1.5rem" }}>Lorem Ipsum</b>
-                  <br /> Lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                </p>
-              </div>
-            </div>
-            <div
-              className="test1"
-              style={{ backgroundImage: `url(${ocsnippet1})` }}
-            >
-              <div
-                style={{
-                  flex: "40% ",
-                  alignItems: "end",
-                  justifyContent: "flex-end",
-                  position: "relative",
-                }}
-              >
-                <h1
-                  className="test1_text"
-                  style={{
-                    fontSize: "5rem",
-                    position: "absolute",
-                    bottom: "0",
-                    right: "0",
-                  }}
-                >
-                  04
-                </h1>
-              </div>
-              <div style={{ flex: "60% " }}>
-                <p
-                  className="test1_text"
-                  style={{ position: "absolute", bottom: "0", padding: "1rem" }}
-                >
-                  <b style={{ fontSize: "1.5rem" }}>Lorem Ipsum</b>
-                  <br /> Lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                </p>
-              </div>
-            </div>
+            ></div>
+            <h2>Breadcrumber</h2>
+            <p>Final project for my 11th grade Computer Programming subject.</p>
           </div>
-          <div className="test-row">
-            <div className="test1">Content here</div>
-            <div className="test1">Content here</div>
+          <div className="proj-card">
+            <div
+              className="proj-prev"
+              style={{ backgroundImage: `url(${neuchina})` }}
+            ></div>
+            <h2>NEU China Studies Center</h2>
+            <p>Final project for my 11th grade Computer Programming subject.</p>
+          </div>
+        </div>
+        <div className="proj-row">
+          <div className="proj-card">
+            <div
+              className="proj-prev"
+              style={{ backgroundImage: `url(${yardee})` }}
+            ></div>
+            <h2>Yardee</h2>
+            <p>Final project for my 11th grade Computer Programming subject.</p>
+          </div>
+          <div className="proj-card">
+            <div
+              className="proj-prev"
+              style={{ backgroundImage: `url(${ocsnippet1})` }}
+            ></div>
+            <h2>Character Profile (Snippet)</h2>
+            <p>Final project for my 11th grade Computer Programming subject.</p>
+          </div>
+        </div>
+        <div className="proj-row">
+          <div className="proj-card">
+            <div
+              className="proj-prev"
+              style={{ backgroundImage: `url(${breadcrumber})` }}
+            ></div>
+            <h2>Breadcrumber</h2>
+            <p>Final project for my 11th grade Computer Programming subject.</p>
+          </div>
+          <div className="proj-card">
+            <div
+              className="proj-prev"
+              style={{ backgroundImage: `url(${neuchina})` }}
+            ></div>
+            <h2>NEU China Studies Center</h2>
+            <p>Final project for my 11th grade Computer Programming subject.</p>
           </div>
         </div>
       </div>
