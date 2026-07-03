@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Skillset from "../components/Skillset";
+import ProjCard from "../components/Proj-card";
 
 import placeholder from "../assets/placeholder.jpg";
 import Carousel from "../components/Carousel";
@@ -7,6 +8,7 @@ import yardee from "../assets/previews/yardee.gif";
 import neuchina from "../assets/previews/chinastudies.gif";
 import breadcrumber from "../assets/previews/breadcrumber.png";
 import ocsnippet1 from "../assets/previews/ocsnippet1.gif";
+import radiary1 from "../assets/previews/radiary1.png";
 
 const certifications = [
   {
@@ -45,6 +47,12 @@ const certifications = [
     subtitle: "Lorem ipsum dolor sit amet...",
   },
 ];
+
+const breadcrumberTags = ["react", "ts", "html", "css"];
+const neuchinaTags = ["html", "css", "js"];
+const yardeeTags = ["html", "css", "js"];
+const ocsnippetTags = ["css", "bootstrap"];
+const miscTags = ["figma", "png/jpeg", "misc"];
 
 {
   {
@@ -135,58 +143,47 @@ export default function Home() {
         <p>compilation of websites and code snippets</p>
         <hr />
         <div className="proj-row">
-          <div className="proj-card">
-            <div
-              className="proj-prev"
-              style={{ backgroundImage: `url(${breadcrumber})` }}
-            ></div>
-            <h2>Breadcrumber</h2>
-            <p>Final project for my 11th grade Computer Programming subject.</p>
-          </div>
-          <div className="proj-card">
-            <div
-              className="proj-prev"
-              style={{ backgroundImage: `url(${neuchina})` }}
-            ></div>
-            <h2>NEU China Studies Center</h2>
-            <p>Final project for my 11th grade Computer Programming subject.</p>
-          </div>
+          <ProjCard
+            projPreview={breadcrumber}
+            title="breadcrumber"
+            subtitle="Make passion projects easier by dividing them into smaller crumbs. Made during a 5-day hackathon."
+            tags={breadcrumberTags}
+          />
+          <ProjCard
+            projPreview={neuchina}
+            title="NEU China Studies Center"
+            subtitle="Designed to feature news from New Era University's China Studies Center."
+            tags={neuchinaTags}
+          />
         </div>
         <div className="proj-row">
-          <div className="proj-card">
-            <div
-              className="proj-prev"
-              style={{ backgroundImage: `url(${yardee})` }}
-            ></div>
-            <h2>Yardee</h2>
-            <p>Final project for my 11th grade Computer Programming subject.</p>
-          </div>
-          <div className="proj-card">
-            <div
-              className="proj-prev"
-              style={{ backgroundImage: `url(${ocsnippet1})` }}
-            ></div>
-            <h2>Character Profile (Snippet)</h2>
-            <p>Final project for my 11th grade Computer Programming subject.</p>
-          </div>
+          <ProjCard
+            projPreview={yardee}
+            title="Yardee"
+            subtitle="Discover small businesses near you. Final exam for my Grade 11 - Computer Programming subject."
+            tags={yardeeTags}
+          />
+          <ProjCard
+            projPreview={ocsnippet1}
+            title="Character Profile (Snippet)"
+            subtitle="Made for a website called toyhou.se. The website uses a CSS Bootstrap plugin."
+            tags={ocsnippetTags}
+          />
         </div>
         <div className="proj-row">
-          <div className="proj-card">
-            <div
-              className="proj-prev"
-              style={{ backgroundImage: `url(${breadcrumber})` }}
-            ></div>
-            <h2>Breadcrumber</h2>
-            <p>Final project for my 11th grade Computer Programming subject.</p>
-          </div>
-          <div className="proj-card">
-            <div
-              className="proj-prev"
-              style={{ backgroundImage: `url(${neuchina})` }}
-            ></div>
-            <h2>NEU China Studies Center</h2>
-            <p>Final project for my 11th grade Computer Programming subject.</p>
-          </div>
+          <ProjCard
+            projPreview={placeholder}
+            title="Null"
+            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+            dictum justo, vel lobortis sem."
+            tags={breadcrumberTags}
+          />
+          <ProjCard
+            projPreview={radiary1}
+            title="Concept work"
+            subtitle="Drafts, concepts or simple graphics with minimum to no code, purely for the sake of design."
+            tags={miscTags}
+          />
         </div>
       </div>
 
