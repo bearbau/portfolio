@@ -257,7 +257,7 @@ video {
 .col {
   display: flex;
   flex-direction: column;  /* customize flex percentage to liking */
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0rem;
   justify-content: center;
   align-items: flex-start; 
   position: relative;
@@ -285,17 +285,7 @@ video {
 .oval:nth-child(1) { width: 30vh }
 .oval:nth-child(2) { margin-top: 2rem;}
 
-.oval:nth-child(1):hover { margin-top: 2rem; opacity: 0.5; }
-.oval:nth-child(2):hover { margin-top: 4rem; opacity: 0.5; }
-.oval:nth-child(3):hover { margin-top: 2rem; opacity: 0.5; }
-
-/* what i do ------------------------------------------------------------------------ */
-.border-box {
-  border: 2px solid var(--dark);
-  border-radius: 20px;
-  margin: 1rem;
-  padding: 5rem;
-}
+.oval:hover { transform: translateY(2rem); opacity: 0.5; }
 
 .cntr-row {
   display: flex;
@@ -303,20 +293,6 @@ video {
   padding: 5rem 10rem;
 }
 
-/* section 2 (skillset) */
-.hero-bottom {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 2rem 1rem 2rem;
-  margin: 0rem 0rem 3rem 0rem;
-  border-radius: 0px 0px 20px 20px;
-  align-items: stretch;
-  background-color: var(--light);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin: 0px 0px 3vh 0px;
-  scroll-snap-align: center;
-  scroll-margin-top: 1rem;
-}
 
 .nav-container {
   display: flex;
@@ -402,7 +378,7 @@ button.stack:hover {
 .proj-container {
   display: flex;
   flex-direction: column;
-  padding: 5rem 15rem;
+  padding: 1rem 10rem;
 }
 
 .proj-row {
@@ -416,11 +392,11 @@ button.stack:hover {
   display: flex;
   flex-direction: column;
   flex: 50%;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   padding: 0rem;
   border-radius: 2rem;
   gap: 0.2rem;
   transition-duration: 0.5s;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .proj-card:hover {
@@ -434,7 +410,6 @@ button.stack:hover {
   border-radius: 1rem 1rem 0rem 0rem;
   overflow: hidden;
   background-repeat: no-repeat;
-  padding: 10px;
   aspect-ratio: 20 / 9;
 }
 
@@ -513,12 +488,3 @@ button.stack:hover {
   flex-direction: column;
   padding: 5vh 15vh;
 }
-
-
-
-
-
-
-
-
-

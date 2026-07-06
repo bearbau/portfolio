@@ -13,38 +13,29 @@ import radiary1 from "../assets/previews/radiary1.png";
 const certifications = [
   {
     image: placeholder,
-    title: "Card 1",
-    subtitle: "Lorem ipsum dolor sit amet...",
+    title: "SQL and Relational Databases",
+    subtitle: "by IBM",
   },
   {
     image: placeholder,
-    title: "Card 2",
-    subtitle: "Lorem ipsum dolor sit amet...",
+    title: "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
+    subtitle: "by Oracle",
   },
   {
     image: placeholder,
-    title: "Card 3",
-    subtitle: "Lorem ipsum dolor sit amet...",
+    title: "Oracle Data Platform 2025 Certified Foundations Associate",
+    subtitle: "by Oracle",
   },
   {
     image: placeholder,
-    title: "Card 4",
-    subtitle: "Lorem ipsum dolor sit amet...",
+    title:
+      "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+    subtitle: "by Oracle",
   },
   {
     image: placeholder,
-    title: "Card 5",
-    subtitle: "Lorem ipsum dolor sit amet...",
-  },
-  {
-    image: placeholder,
-    title: "Card 6",
-    subtitle: "Lorem ipsum dolor sit amet...",
-  },
-  {
-    image: placeholder,
-    title: "Card 6",
-    subtitle: "Lorem ipsum dolor sit amet...",
+    title: "CodeKada: The Online Hackathon 2026",
+    subtitle: "by DevKada",
   },
 ];
 
@@ -107,36 +98,6 @@ export default function Home() {
       </div>
 
       <Skillset />
-
-      <div
-        className="container"
-        style={{
-          padding: "5rem",
-          borderRadius: "0",
-          backgroundColor: "var(--primary)",
-        }}
-      >
-        <h1 style={{ textAlign: "center", color: "var(--light)" }}>
-          What I do
-        </h1>
-        <div className="cntr-row" style={{ padding: "0rem 5rem" }}>
-          <div className="border-box">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-            dictum justo, vel lobortis sem. Mauris sagittis commodo auctor.
-            Curabitur a lectus massa.
-          </div>
-          <div className="border-box">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-            dictum justo, vel lobortis sem. Mauris sagittis commodo auctor.
-            Curabitur a lectus massa.
-          </div>
-          <div className="border-box">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-            dictum justo, vel lobortis sem. Mauris sagittis commodo auctor.
-            Curabitur a lectus massa.
-          </div>
-        </div>
-      </div>
 
       <div className="proj-container">
         <h1>Projects</h1>
