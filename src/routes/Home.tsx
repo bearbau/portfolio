@@ -1,39 +1,57 @@
 import Header from "../components/Header";
 import Skillset from "../components/Skillset";
 import ProjCard from "../components/Proj-card";
-
-import placeholder from "../assets/placeholder.jpg";
 import Carousel from "../components/Carousel";
+
+import cv from "../assets/CV.pdf";
+import placeholder from "../assets/placeholder.jpg";
+
+{
+  {
+    /* project imports */
+  }
+}
 import yardee from "../assets/previews/yardee.gif";
 import neuchina from "../assets/previews/chinastudies.gif";
 import breadcrumber from "../assets/previews/breadcrumber.png";
 import ocsnippet1 from "../assets/previews/ocsnippet1.gif";
 import radiary1 from "../assets/previews/radiary1.png";
 
+{
+  {
+    /* certification imports */
+  }
+}
+import ibmSQL from "../assets/certifications/SQLandRelData101.png";
+import ociFoundations from "../assets/certifications/cloudInfrastructure.png";
+import odpFoundations from "../assets/certifications/dataPlatform.png";
+import ociAiFoundations from "../assets/certifications/aiFoundations.png";
+import devKadaHT from "../assets/certifications/devKadaHackathon.png";
+
 const certifications = [
   {
-    image: placeholder,
+    image: ibmSQL,
     title: "SQL and Relational Databases",
     subtitle: "by IBM",
   },
   {
-    image: placeholder,
+    image: ociFoundations,
     title: "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
     subtitle: "by Oracle",
   },
   {
-    image: placeholder,
+    image: odpFoundations,
     title: "Oracle Data Platform 2025 Certified Foundations Associate",
     subtitle: "by Oracle",
   },
   {
-    image: placeholder,
+    image: ociAiFoundations,
     title:
       "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
     subtitle: "by Oracle",
   },
   {
-    image: placeholder,
+    image: devKadaHT,
     title: "CodeKada: The Online Hackathon 2026",
     subtitle: "by DevKada",
   },
@@ -44,25 +62,6 @@ const neuchinaTags = ["html", "css", "js"];
 const yardeeTags = ["html", "css", "js"];
 const ocsnippetTags = ["css", "bootstrap"];
 const miscTags = ["figma", "png/jpeg", "misc"];
-
-{
-  {
-    /*Components of the home page
-
-  Hero page w header
-  About me
-  What I do
-  Projects
-  Certifications
-  Footer  
-  
-  If need to be reused, make a new component such as the header
-  If not, just make it a div-container
-
-  Let me destroy my code rq and then fix it again
-  */
-  }
-}
 
 export default function Home() {
   return (
@@ -79,10 +78,13 @@ export default function Home() {
           <p>front-end dev & UI/UX designer.</p>
           <div className="btn-row">
             <button className="hero-btn">
-              <i className="fa-regular fa-file">&nbsp;</i>resume
+              <i className="fa-regular fa-file">&nbsp;</i>
+              <a href={cv}>resume</a>
             </button>
             <button className="hero-btn-circle">
-              <i className="fa-brands fa-github"></i>
+              <a href="https://github.com/bearbau">
+                <i className="fa-brands fa-github"></i>
+              </a>
             </button>
             <button className="hero-btn-circle">
               <i className="fa-brands fa-telegram"></i>
@@ -134,9 +136,8 @@ export default function Home() {
         <div className="proj-row">
           <ProjCard
             projPreview={placeholder}
-            title="Null"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-            dictum justo, vel lobortis sem."
+            title="Figma projects"
+            subtitle="A compilation of prototype UI designs made on Figma."
             tags={breadcrumberTags}
           />
           <ProjCard

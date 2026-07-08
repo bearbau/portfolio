@@ -130,6 +130,10 @@ button:hover {
   gap: 0.5rem;
 }
 
+.btn-row a {
+  color: var(--light);
+}
+
 .btn-col {
   font-size: 0.9rem;
   color: var(--light);
@@ -439,7 +443,6 @@ button.stack:hover {
   box-shadow: none;
 }
 
-
 /* carousel for certification ------------------------------------------------------------------------ */
 
 .carousel {
@@ -455,6 +458,7 @@ button.stack:hover {
 .carousel::-webkit-scrollbar {
   display: none;
 }
+
 
 /* card contents */
 
@@ -472,10 +476,20 @@ button.stack:hover {
   flex-shrink: 0;
 }
 
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
 .card:hover {
   background-color: var(--light-hover);
 }
 
+.certTitle {
+  font-size: 1rem;
+}
 
 
 /* make responsive later https://www.w3schools.com/html/html_responsive.asp */
@@ -483,8 +497,15 @@ button.stack:hover {
 
 /* footer */
 .footer {
-  margin-top: auto;
   display: flex;
   flex-direction: column;
-  padding: 5vh 15vh;
+  background-color: var(--dark);
+  padding: 5rem;
+  margin-top: 5rem;
 }
+
+.footer p {
+  color: var(--light-hover);
+  text-align: center;
+}
+
