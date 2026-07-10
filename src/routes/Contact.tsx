@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 
-export default function Projects() {
+export default function Contact() {
   return (
     <div
       className="container"

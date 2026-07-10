@@ -87,13 +87,19 @@ export default function Home() {
               </a>
             </button>
             <button className="hero-btn-circle">
-              <i className="fa-brands fa-telegram"></i>
+              <a href="https://t.me/beatrizbautista">
+                <i className="fa-brands fa-telegram"></i>
+              </a>
             </button>
             <button className="hero-btn-circle">
-              <i className="fa-solid fa-keyboard"></i>
+              <a href="https://monkeytype.com/profile/bearbau">
+                <i className="fa-solid fa-keyboard"></i>
+              </a>
             </button>
             <button className="hero-btn-circle">
-              <i className="fa-solid fa-flag"></i>
+              <a href="https://learn.cylabacademy.org/users/bearbau">
+                <i className="fa-solid fa-flag"></i>
+              </a>
             </button>
           </div>
         </div>

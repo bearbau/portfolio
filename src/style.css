@@ -165,18 +165,32 @@ video {
 
 .title-logo {
   font-size: 1.2rem;
+}
+
+.title-logo-light {
   color: var(--light);
 }
+
+.title-logo-dark {
+  color: var(--dark);
+}
+
 
 .navbar {
   display: flex;
   gap: 1rem;
-  color: var(--light);
 }
 
 .navbar a {
   text-decoration: none;
+}
+
+.navbar-light a {
   color: var(--light);
+}
+
+.navbar-dark a {
+  color: var(--dark);
 }
 
 .navbar a:hover {
@@ -185,12 +199,20 @@ video {
 
 .contact-btn {
   background-color: transparent;
-  border: 2px solid var(--light);
   padding: 5px 15px;
   margin: 0;
   border-radius: 80px;
   font-size: 1rem;
+}
+
+.contact-btn-light {
+  border: 2px solid var(--light);
   color: var(--light);
+}
+
+.contact-btn-dark {
+  border: 2px solid var(--dark);
+  color: var(--dark);
 }
 
 .contact-btn:hover {
