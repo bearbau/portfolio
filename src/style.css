@@ -33,6 +33,12 @@ body {
   background-color: var(--light);
 }
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /*html {
   scroll-snap-type: y mandatory;
 } enable when needed*/
@@ -523,8 +529,9 @@ button.stack:hover {
   flex-direction: column;
   background-color: var(--dark);
   padding: 5rem;
-  margin-top: 5rem;
+  margin-top: auto;
 }
+
 
 .footer p {
   color: var(--light-hover);
