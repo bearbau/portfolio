@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("app")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio/">
       <App />
     </BrowserRouter>
   </StrictMode>,
