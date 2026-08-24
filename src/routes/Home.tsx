@@ -117,6 +117,7 @@ export default function Home() {
             title="breadcrumber"
             subtitle="Make passion projects easier by dividing them into smaller crumbs. Made during a 5-day hackathon."
             tags={breadcrumberTags}
+            {{/*on click: open page*/}}
           />
           <ProjCard
             projPreview={neuchina}
