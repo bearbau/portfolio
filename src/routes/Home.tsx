@@ -66,97 +66,100 @@ const miscTags = ["figma", "png/jpeg", "misc"];
 export default function Home() {
   return (
     <>
-      <div className="hero">
-        <Header />
-        <div className="hero-content">
-          <p>hi there.</p>
-          <span className="hero-title">
-            I'm Beatriz Bautista.&nbsp;
-            <i className="fa-solid fa-fish-fins"></i>
-          </span>
+      <div className="main">
+        <div className="column">
+          <div className="box" style={{ height: "100%" }}>
+            content
+          </div>
+        </div>
+        <div className="column">
+          <div className="row">
+            <div className="box" style={{ width: "100%" }}>
+              <p>hi there.</p>
 
-          <p>front-end dev & UI/UX designer.</p>
-          <div className="btn-row">
-            <button className="hero-btn">
-              <i className="fa-regular fa-file">&nbsp;</i>
-              <a href={cv}>resume</a>
-            </button>
-            <button className="hero-btn-circle">
-              <a href="https://github.com/bearbau">
-                <i className="fa-brands fa-github"></i>
-              </a>
-            </button>
-            <button className="hero-btn-circle">
-              <a href="https://t.me/beatrizbautista">
-                <i className="fa-brands fa-telegram"></i>
-              </a>
-            </button>
-            <button className="hero-btn-circle">
-              <a href="https://monkeytype.com/profile/bearbau">
-                <i className="fa-solid fa-keyboard"></i>
-              </a>
-            </button>
-            <button className="hero-btn-circle">
-              <a href="https://learn.cylabacademy.org/users/bearbau">
-                <i className="fa-solid fa-flag"></i>
-              </a>
-            </button>
+              <h1>
+                I'm Beatriz Bautista. &nbsp;
+                <i className="fa-solid fa-fish-fins"></i>
+              </h1>
+
+              <p>front-end dev & UI/UX designer.</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="column" style={{ flex: "40%", height: "100%" }}>
+              <div className="box">
+                <h1>about me</h1>
+                <p>
+                  I am a front-end web developer and UI/UX designer who has been
+                  developing and conceptualizing web designs since 2020.
+                  <br />
+                  <br />
+                  Currently pursuing a degree in Computer Science, I also spend
+                  my free time writing Bash scripts and studying cybersecurity.
+                </p>
+              </div>
+              <div className="box" style={{ height: "100%" }}>
+                <h1>techstack</h1>
+                <div className="row">
+                  <button className="stack">
+                    <i className="fa-brands fa-html5"></i>&nbsp;html
+                  </button>
+                  <button className="stack">
+                    <i className="fa-brands fa-css"></i>&nbsp;css
+                  </button>
+                  <button className="stack">
+                    <i className="fa-brands fa-bootstrap"></i>&nbsp;bootstrap
+                  </button>
+                  <button className="stack">
+                    <i className="fa-brands fa-react"></i>&nbsp;react
+                  </button>
+                  <button className="stack">
+                    <i className="fa-brands fa-js"></i>&nbsp;javascript
+                  </button>
+                  <button className="stack">
+                    <i className="fa-brands fa-typescript"></i>
+                    &nbsp;typescript
+                  </button>
+                  <button className="stack">
+                    <i className="fa-solid fa-bolt-lightning"></i>&nbsp;vite
+                  </button>
+                  <button className="stack">
+                    <i className="fa-brands fa-figma"></i>&nbsp;figma
+                  </button>
+                  <button className="stack">
+                    <i className="fa-brands fa-java"></i>&nbsp;java
+                  </button>
+                  <button className="stack">
+                    <i className="fa-brands fa-python"></i>&nbsp;python
+                  </button>
+                  <button className="stack">
+                    <i className="fa-solid fa-database"></i>&nbsp;SQL
+                  </button>
+                  <button className="stack">
+                    <i className="fa-brands fa-linux"></i>&nbsp;linux
+                  </button>
+                  <button className="stack">
+                    <i className="fa-solid fa-terminal"></i>&nbsp;bash
+                  </button>
+                  <button className="stack">
+                    <i className="fa-brands fa-docker"></i>&nbsp;docker
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="column" style={{ flex: "60%" }}>
+              <div className="nav">
+                <button>Projects</button>
+                <button>Certificates</button>
+                <button>Blog</button>
+              </div>
+              <div className="box" style={{ height: "100%" }}>
+                content
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <Skillset />
-
-      <div className="proj-container">
-        <h1>Projects</h1>
-        <p>compilation of websites and code snippets</p>
-        <hr />
-        <div className="proj-row">
-          <ProjCard
-            projPreview={breadcrumber}
-            title="breadcrumber"
-            subtitle="Make passion projects easier by dividing them into smaller crumbs. Made during a 5-day hackathon."
-            tags={breadcrumberTags}
-            {{/*on click: open page*/}}
-          />
-          <ProjCard
-            projPreview={neuchina}
-            title="NEU China Studies Center"
-            subtitle="Designed to feature news from New Era University's China Studies Center."
-            tags={neuchinaTags}
-          />
-        </div>
-        <div className="proj-row">
-          <ProjCard
-            projPreview={yardee}
-            title="Yardee"
-            subtitle="Discover small businesses near you. Final exam for my Grade 11 - Computer Programming subject."
-            tags={yardeeTags}
-          />
-          <ProjCard
-            projPreview={ocsnippet1}
-            title="Character Profile (Snippet)"
-            subtitle="Made for a website called toyhou.se. The website uses a CSS Bootstrap plugin."
-            tags={ocsnippetTags}
-          />
-        </div>
-        <div className="proj-row">
-          <ProjCard
-            projPreview={placeholder}
-            title="Figma projects"
-            subtitle="A compilation of prototype UI designs made on Figma."
-            tags={breadcrumberTags}
-          />
-          <ProjCard
-            projPreview={radiary1}
-            title="Concept work"
-            subtitle="Drafts, concepts or simple graphics with minimum to no code, purely for the sake of design."
-            tags={miscTags}
-          />
-        </div>
-      </div>
-
-      <Carousel cards={certifications} />
     </>
   );
 }
