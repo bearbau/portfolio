@@ -1,7 +1,7 @@
-import Header from "../components/Header";
+import Header from "../components/Navbar";
 import placeholder from "../assets/placeholder.jpg";
 
-export default function Breadcrumber(){
+export default function Breadcrumber() {
   return (
     <div
       className="container"

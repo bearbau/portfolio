@@ -1,10 +1,11 @@
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import Skillset from "../components/Skillset";
 import ProjCard from "../components/Proj-card";
 import Carousel from "../components/Carousel";
 
 import cv from "../assets/CV.pdf";
 import placeholder from "../assets/placeholder.jpg";
+import shark from "../assets/shark.png";
 
 {
   {
@@ -66,58 +67,56 @@ const miscTags = ["figma", "png/jpeg", "misc"];
 export default function Home() {
   return (
     <>
-      <div className="hero">
-        <Header />
-        <div className="hero-content">
-          <p>hi there.</p>
-          <span className="hero-title">
-            I'm Beatriz Bautista.&nbsp;
-            <i className="fa-solid fa-fish-fins"></i>
-          </span>
-
-          <p>front-end dev & UI/UX designer.</p>
-          <div className="btn-row">
-            <button className="hero-btn">
-              <i className="fa-regular fa-file">&nbsp;</i>
-              <a href={cv}>resume</a>
-            </button>
-            <button className="hero-btn-circle">
-              <a href="https://github.com/bearbau">
-                <i className="fa-brands fa-github"></i>
-              </a>
-            </button>
-            <button className="hero-btn-circle">
-              <a href="https://t.me/beatrizbautista">
-                <i className="fa-brands fa-telegram"></i>
-              </a>
-            </button>
-            <button className="hero-btn-circle">
-              <a href="https://monkeytype.com/profile/bearbau">
-                <i className="fa-solid fa-keyboard"></i>
-              </a>
-            </button>
-            <button className="hero-btn-circle">
-              <a href="https://learn.cylabacademy.org/users/bearbau">
-                <i className="fa-solid fa-flag"></i>
-              </a>
-            </button>
+      <div className="h-screen grid grid-flow-col grid-rows-7 gap-0 py-20 px-45">
+        <div className="h-full row-span-5 col-span-5 bg-blue-500 mx-4 rounded-l-xl animate-in fade-in slide-in-from-top-20 duration-2000"></div>
+        <div className="h-full row-span-2 col-span-5 p-0 m-4">
+          <h1 className="text-7xl font-bold tracking-wide">bearbau</h1>
+          <p className="text-base">full stack dev and front-end designer.</p>
+          <Navbar />
+        </div>
+        <div className="col-span-2 row-span-7 bg-blue-500 mx-4 rounded-xl rounded-tl-none animate-in fade-in slide-in-from-top-15 duration-4000">
+          image
+        </div>
+        <div className="col-span-1 row-span-7">
+          <div className="flex h-full flex-col justify-start gap-5">
+            <a href={cv} className="flex h-12 w-12 items-center justify-center">
+              <i className="fa-regular fa-file text-2xl"></i>
+            </a>
+            <a
+              href="https://github.com/bearbau"
+              className="flex h-12 w-12 items-center justify-center"
+            >
+              <i className="fa-brands fa-github text-2xl"></i>
+            </a>
+            <a
+              href="https://t.me/beatrizbautista"
+              className="flex h-12 w-12 items-center justify-center"
+            >
+              <i className="fa-brands fa-telegram text-2xl"></i>
+            </a>
+            <a
+              href="https://monkeytype.com/profile/bearbau"
+              className="flex h-12 w-12 items-center justify-center"
+            >
+              <i className="fa-solid fa-keyboard text-2xl"></i>
+            </a>
           </div>
         </div>
       </div>
 
-      <Skillset />
+      <div className="main-page">
+        <h1>tech stack</h1>
+        <Skillset />
+      </div>
 
-      <div className="proj-container">
-        <h1>Projects</h1>
-        <p>compilation of websites and code snippets</p>
-        <hr />
+      <div className="projects">
+        <h1>projects</h1>
         <div className="proj-row">
           <ProjCard
             projPreview={breadcrumber}
             title="breadcrumber"
             subtitle="Make passion projects easier by dividing them into smaller crumbs. Made during a 5-day hackathon."
             tags={breadcrumberTags}
-            {{/*on click: open page*/}}
           />
           <ProjCard
             projPreview={neuchina}
