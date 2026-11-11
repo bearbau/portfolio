@@ -3,3 +3,10 @@
 @theme {
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

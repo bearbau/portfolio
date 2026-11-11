@@ -1,19 +1,11 @@
-import Header from "../components/Navbar";
-
 export default function Projects() {
   return (
-    <div
-      className="container"
-      style={{ padding: "5vh 10vh", borderRadius: "0px 0px 5rem 5rem" }}
-    >
-      <Header />
-      <div className="container" style={{ alignItems: "center" }}>
-        <i
-          className="fa-solid fa-road-barrier"
-          style={{ fontSize: "5rem", color: "var(--primary)" }}
-        ></i>
-        <br />
-        <p>This part is in construction! Please visit later.</p>
+    <div className="grid w-full grid-flow-dense grid-cols-30 gap-2 bg-gray-950/5 p-2 dark:bg-white/10">
+      <div className="@container isolate flex flex-col gap-2 overflow-hidden rounded-2xl bg-white p-2 text-white outline outline-gray-950/5 dark:bg-gray-950 dark:outline-white/10 col-span-15">
+        content
+      </div>
+      <div className="@container isolate flex flex-col gap-2 overflow-hidden rounded-2xl bg-white p-2 text-white outline outline-gray-950/5 dark:bg-gray-950 dark:outline-white/10 col-span-15">
+        content
       </div>
     </div>
   );

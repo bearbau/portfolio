@@ -1,11 +1,12 @@
-import Navbar from "../components/Navbar";
 import Skillset from "../components/Skillset";
 import ProjCard from "../components/Proj-card";
 import Carousel from "../components/Carousel";
+import { Link } from "react-router-dom";
 
 import cv from "../assets/CV.pdf";
 import placeholder from "../assets/placeholder.jpg";
-import shark from "../assets/shark.png";
+import { useEffect, useState } from "react";
+import shark from "../assets/shark.webp";
 
 {
   {
@@ -67,40 +68,147 @@ const miscTags = ["figma", "png/jpeg", "misc"];
 export default function Home() {
   return (
     <>
-      <div className="h-screen grid grid-flow-col grid-rows-7 gap-0 py-20 px-45">
-        <div className="h-full row-span-5 col-span-5 bg-blue-500 mx-4 rounded-l-xl animate-in fade-in slide-in-from-top-20 duration-2000"></div>
-        <div className="h-full row-span-2 col-span-5 p-0 m-4">
-          <h1 className="text-7xl font-bold tracking-wide">bearbau</h1>
-          <p className="text-base">full stack dev and front-end designer.</p>
-          <Navbar />
+      {/* hero */}
+      {/*grid grid-cols-[5fr_2fr_auto] grid-rows-7*/}
+
+      <div className="grid h-screen grid-cols-2 grid-rows-1 gap-x-[calc(100vw*2/12)] px-[calc(100vw/12)] py-[calc(100vh/12)]">
+        <div className="min-h-0">
+          <img
+            src={placeholder}
+            className="max-h-full max-w-full object-contain"
+          />
         </div>
-        <div className="col-span-2 row-span-7 bg-blue-500 mx-4 rounded-xl rounded-tl-none animate-in fade-in slide-in-from-top-15 duration-4000">
-          image
-        </div>
-        <div className="col-span-1 row-span-7">
-          <div className="flex h-full flex-col justify-start gap-5">
-            <a href={cv} className="flex h-12 w-12 items-center justify-center">
-              <i className="fa-regular fa-file text-2xl"></i>
-            </a>
-            <a
-              href="https://github.com/bearbau"
-              className="flex h-12 w-12 items-center justify-center"
-            >
-              <i className="fa-brands fa-github text-2xl"></i>
-            </a>
-            <a
-              href="https://t.me/beatrizbautista"
-              className="flex h-12 w-12 items-center justify-center"
-            >
-              <i className="fa-brands fa-telegram text-2xl"></i>
-            </a>
-            <a
-              href="https://monkeytype.com/profile/bearbau"
-              className="flex h-12 w-12 items-center justify-center"
-            >
-              <i className="fa-solid fa-keyboard text-2xl"></i>
-            </a>
+
+        <div className="flex items-center">
+          <div className="pr-[calc(100vw/12)]">
+            <span className="text-1xl">November 7, 2026 | 9:51</span>
+            <h1 className="text-7xl font-bold tracking-wide m-0">bearbau</h1>
+            <p className="text-1xl">
+              ui/ux designer and full stack developer. shell scripter and blue
+              enthusiast. really, really loves sharks.
+            </p>
+            <hr className="h-[0.6px] bg-current border-0 my-5" />
+            <div className="flex justify-between">
+              <Link to="/about">
+                <b>01</b>
+                <br />
+                about
+              </Link>
+              <Link to="/projects">
+                <b>02</b>
+                <br />
+                projects
+              </Link>
+              <Link to="/blog">
+                <b>03</b>
+                <br />
+                blog
+              </Link>
+            </div>
           </div>
+        </div>
+      </div>
+
+      {/* about me */}
+      <div className="h-screen flex p-10 bg-sky-400">
+        <div className="flex flex-1 p-20 items-start justify-center">
+          <div className="h-auto w-80">
+            <h1 className="text-6xl font-bold tracking-wide m-0 text-white">
+              about <br /> me.
+            </h1>
+            <p className="text-white">
+              i've been tinkering CSS and bootstrap since 2020. passionate in
+              code and design, i am currently finishing my major in computer
+              science and working towards my goal of being an industry standard
+              UI/UX designer.
+            </p>
+            <button className="border border-white text-white my-5 px-10 py-1 w-max rounded-xl text-center">
+              resume
+            </button>
+            <button className="bg-white text-sky-400 mx-3 my-5 px-10 py-1 w-max rounded-xl text-center">
+              github
+            </button>
+          </div>
+        </div>
+
+        <div className="flex flex-1 p-20 items-end place-content-end justify-center">
+          <div className="h-auto w-80">
+            <h1 className="text-4xl font-bold tracking-wide m-0 text-white">
+              techstack
+            </h1>
+            <p className="text-white">
+              {/*refactor this, for visual only, use li*/}
+              <b>css</b> <br />
+              tailwind <br />
+              bootstrap <br />
+              <br />
+              <b>javascript</b> <br />
+              react <br />
+              typescript <br />
+              <br />
+              <b>wireframing</b> <br />
+              figma <br />
+              lucidchart <br />
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="h-screen grid grid-cols-[5fr_2fr_auto] grid-rows-7 gap-x-6 gap-y-0 py-20 px-45">
+        <div
+          className="bg-cover bg-fixed bg-center col-start-1 row-start-1 row-span-5 rounded-l-3xl animate-in fade-in slide-in-from-top-20 duration-2000"
+          style={{ backgroundImage: `url(${shark})` }}
+        ></div>
+
+        <div className="col-start-1 row-start-6 row-span-2 my-2">
+          <h1 className="text-6xl font-bold tracking-wide m-0">bearbau</h1>
+          <p className="text-base p-0">
+            full stack dev and front-end designer.
+          </p>
+          <div className="flex flex-row gap-3 my-2">
+            <Link
+              to="/projects"
+              className="border px-5 py-1 w-max rounded-xl text-center"
+            >
+              projects
+            </Link>
+            <Link
+              to="/blog"
+              className="border px-5 py-1 w-max rounded-xl text-center"
+            >
+              blog
+            </Link>
+          </div>
+        </div>
+
+        <div
+          className="bg-cover bg-fixed bg-center col-start-2 row-start-1 row-span-7 rounded-3xl rounded-tl-none animate-in fade-in slide-in-from-top-15 duration-3500"
+          style={{ backgroundImage: `url(${shark})` }}
+        ></div>
+
+        <div className="col-start-3 row-start-1 row-span-7 flex flex-col gap-5">
+          <a href={cv} className="flex h-12 w-12 items-center justify-center">
+            <i className="fa-regular fa-file text-2xl"></i>
+          </a>
+          <a
+            href="https://github.com/bearbau"
+            className="flex h-12 w-12 items-center justify-center"
+          >
+            <i className="fa-brands fa-github text-2xl"></i>
+          </a>
+          <a
+            href="https://t.me/beatrizbautista"
+            className="flex h-12 w-12 items-center justify-center"
+          >
+            <i className="fa-brands fa-telegram text-2xl"></i>
+          </a>
+          <a
+            href="https://monkeytype.com/profile/bearbau"
+            className="flex h-12 w-12 items-center justify-center"
+          >
+            <i className="fa-solid fa-keyboard text-2xl"></i>
+          </a>
         </div>
       </div>
 
